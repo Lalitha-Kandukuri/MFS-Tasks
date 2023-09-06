@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Registration Form</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        
+        .outer-box {
+            width: 700px;
+            height: 400px;
+            background-color: #a32c54; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inner-box {
+            width: 500px;
+            height: 350px;
+            background-color: #74233c; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="select"],
+        textarea {
+            width: 70%;
+            padding: 3px;
+            border: none;
+            margin-top: 9px;
+            border-radius: 0px;
+        }
+
+        ::placeholder{
+            font-size: 10px;
+        }
+
+        select{
+            font-size: 10px;
+            width: 50%;
+            padding: 3px;
+            border: none;
+            border-radius: 0px;
+        }
+
+        th{
+            text-align: left;
+            color: white;
+            font-weight: normal;
+        }
+        
+        input[type="submit"] {
+            background-color: white;
+            color: #333333;
+            padding: 6px 125px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        div{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer-box">
+        <div class="inner-box">
+            <table>
+                <form>
+                    <tr>
+                        <th><label for="name">Name:</label></th>
+                        <td><input type="text" id="name" name="name" placeholder="your name"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="email">Email:</label></th>
+                        <td><input type="email" id="email" name="email" placeholder="your email"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="pwd">Password:</label></th>
+                        <td><input type="password" id="pwd" name="pwd"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="phone">Phone Number:</label></th>
+                        <td><input type="tel" name="phone" id="phone"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="gender">Gender:</label></th>
+                        <td>
+                            <div>
+                                <label for="male" style="color: white;">Male:</label>
+                                <input type="radio" name="gender" id="gender" style="margin-right: 0px;">
+                                
+                                <label for="female" style="color: white;">Female:</label>
+                                <input type="radio" name="gender" id="gender" style="margin-right: 0px;">
+
+                                <label for="other" style="color: white;">Other:</label>
+                                <input type="radio" name="gender" id="gender" style="margin-right: 0px;">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="lang">language</label></th>
+                        <td><select name="lang" id="lang">
+                            <option value="" disabled selected>Select language</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="english">English</option>
+                            <option value="telugu">Telugu</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <th><label for="zip">Zip Code:</label></th>
+                        <td><input type="number" id="zip" name="zip"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="about">About:</label></th>
+                        <td><textarea name="about" id="about" style="height: 30px;" placeholder="Write about yourself..."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Register" style="margin-top: 12px;"></td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
